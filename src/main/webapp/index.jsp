@@ -55,7 +55,7 @@
     </style>
 </head>
 <body>
-    <h1> we are deployed a war from jenkins to tomcat  </h1>
+    <h1> we are deployed a war from jenkins to tomcat--webhook  </h1>
     <h2>Menu</h2>
 
     <div id="menu">
