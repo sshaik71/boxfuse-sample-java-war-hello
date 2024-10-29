@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Rajinikanth Cloud DevOps Kitchen+1</title>
+    <title>Jenkins Cloud DevOps Kitchen+1</title>
     <style>
         body {
             text-align: center;
@@ -55,7 +55,7 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to  Jenkins 1st CLASS -- its from Master branch </h1>
+    <h1> we are deployed a war from jenkins to tomcat  </h1>
     <h2>Menu</h2>
 
     <div id="menu">
