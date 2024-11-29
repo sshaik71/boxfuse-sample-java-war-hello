@@ -10,8 +10,8 @@
 
     <properties>
         <docker.image.prefix>kammana</docker.image.prefix>
-        <sonar.host.url>http://65.2.9.64:9000/</sonar.host.url>
-        <sonar.login>squ_16f94fe9bc1c6774f859d54828b666c5e1e064f6</sonar.login>
+        <sonar.host.url>http://65.0.7.128:9000/</sonar.host.url>
+        <sonar.login>squ_e63cc812318e80f932ebea1a3da63b37caa995d5</sonar.login>
         <java.version>11</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
