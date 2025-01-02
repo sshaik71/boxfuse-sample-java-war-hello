@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Jenkins Emergency TechOps Labs</title>
+    <title>Jenkins Emergency TechOps Labs --> DOING PRACTICE </title>
     <style>
         body {
             text-align: center;
