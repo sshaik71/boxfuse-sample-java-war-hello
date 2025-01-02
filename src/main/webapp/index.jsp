@@ -1,101 +1,128 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Jenkins Cloud DevOps Kitchen+1</title>
+    <title>Jenkins Emergency TechOps Labs</title>
     <style>
         body {
             text-align: center;
             font-family: 'Arial', sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
+            background-color: #e9ecef;
+            color: #343a40;
+            margin: 0;
+            padding: 0;
         }
 
-        h1 {
-            color: #d9534f;
+        header {
+            background-color: #007bff;
+            padding: 20px 0;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        section {
+            padding: 20px;
         }
 
         h2 {
-            color: #5bc0de;
+            color: #17a2b8;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         .menu-item {
+            width: 200px;
+            background: white;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
             cursor: pointer;
-            padding: 10px;
-            border: 1px solid #ddd;
-            margin: 5px;
-            display: inline-block;
-            background-color: #5bc0de;
-            color: #fff;
+            transition: transform 0.2s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-item img {
+            max-width: 100%;
+            height: 100px;
+            object-fit: cover;
             border-radius: 5px;
         }
 
-        #sub-items {
-            margin-top: 20px;
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
 
-        #sub-items h3 {
-            color: #5cb85c;
-        }
-
-        .sub-item {
-            padding: 8px;
-            margin: 5px;
-            background-color: #dff0d8;
-            border: 1px solid #d6e9c6;
-            border-radius: 4px;
-            display: inline-block;
-        }
-
-        .menu-item img, .sub-item img {
-            max-width: 100px;
-            max-height: 100px;
-            margin-right: 5px;
-            border-radius: 5px;
+        footer p {
+            margin: 0;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <h1> we are deployed a war from jenkins to tomcat--webhook  </h1>
-    <h2>Menu</h2>
+    <header>
+        <h1>Jenkins Emergency TechOps Labs</h1>
+        <p>Automate, Deploy, Manage - With Excellence!</p>
+    </header>
+    
+    <section>
+        <h2>Key Operations</h2>
+        <div class="menu">
+            <div class="menu-item" onclick="displayInfo('Deployments')">
+                <img src="https://example.com/deployments.jpg" alt="Deployments">
+                <h3>Deployments</h3>
+                <p>Monitor and manage application deployments.</p>
+            </div>
+            <div class="menu-item" onclick="displayInfo('Build Pipelines')">
+                <img src="https://example.com/pipelines.jpg" alt="Build Pipelines">
+                <h3>Build Pipelines</h3>
+                <p>Analyze and optimize Jenkins pipelines.</p>
+            </div>
+            <div class="menu-item" onclick="displayInfo('Log Analysis')">
+                <img src="https://example.com/logs.jpg" alt="Log Analysis">
+                <h3>Log Analysis</h3>
+                <p>Track logs for debugging and insights.</p>
+            </div>
+            <div class="menu-item" onclick="displayInfo('Alert Management')">
+                <img src="https://example.com/alerts.jpg" alt="Alert Management">
+                <h3>Alert Management</h3>
+                <p>Handle critical alerts efficiently.</p>
+            </div>
+        </div>
+        <div id="info-section"></div>
+    </section>
 
-    <div id="menu">
-        <div class="menu-item" onclick="showSubItems('Biryani')">
-            <img src="https://example.com/biryani.jpg" alt="Biryani">
-            Biryani
-        </div>
-        <div class="menu-item" onclick="showSubItems('Curries')">
-            <img src="https://example.com/curries.jpg" alt="Curries">
-            Curries
-        </div>
-        <div class="menu-item" onclick="showSubItems('Pizzas')">
-            <img src="https://example.com/pizzas.jpg" alt="Pizzas">
-            Pizzas
-        </div>
-        <div class="menu-item" onclick="showSubItems('Starters')">
-            <img src="https://example.com/starters.jpg" alt="Starters">
-            Starters
-        </div>
-    </div>
-
-    <div id="sub-items"></div>
+    <footer>
+        <p>&copy; 2025 Jenkins Emergency TechOps Labs | Empowering Your TechOps Team</p>
+    </footer>
 
     <script>
-        function showSubItems(category) {
-            var subItems = {
-                Biryani: ['Chicken Biryani', 'Mutton Biryani', 'Veg Biryani'],
-                Curries: ['Butter Chicken', 'Palak Paneer', 'Chana Masala'],
-                Pizzas: ['Margherita', 'Pepperoni', 'BBQ Chicken'],
-                Starters: ['Paneer Tikka', 'Chicken 65', 'Spring Rolls']
+        function displayInfo(operation) {
+            const details = {
+                Deployments: 'Manage live deployments with Jenkins and ensure uptime.',
+                'Build Pipelines': 'Create and manage CI/CD pipelines seamlessly.',
+                'Log Analysis': 'Get deep insights into system logs for troubleshooting.',
+                'Alert Management': 'Efficiently handle alerts and prevent downtime.'
             };
 
-            var itemsList = subItems[category].map(function(item) {
-                return '<div class="sub-item">' + 
-                            '<img src="https://example.com/' + item.toLowerCase().replace(/ /g, '-') + '.jpg" alt="' + item + '">' + 
-                            item + 
-                        '</div>';
-            }).join('');
-
-            document.getElementById('sub-items').innerHTML = '<h3>' + category + '</h3>' + itemsList;
+            document.getElementById('info-section').innerHTML = `
+                <h3>${operation}</h3>
+                <p>${details[operation]}</p>
+            `;
         }
     </script>
 </body>
