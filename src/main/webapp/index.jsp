@@ -87,7 +87,7 @@
     </header>
 
     <section>
-        <h2>Select Your Challenge</h2>
+        <h2>Select Your DEVOPS  Challenge</h2>
         <div class="game-area">
             <div class="game-card" onclick="showDetails('Level 1')">
                 <img src="https://example.com/level1.jpg" alt="Level 1">
