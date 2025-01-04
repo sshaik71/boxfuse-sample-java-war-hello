@@ -1,4 +1,4 @@
-boxfuse-sample-java-war-hello. TEST CHANGESME
+boxfuse-sample-java-war-hello. TEST CHANGESME POLLLSCM
 =============================
 
 Boxfuse Sample Hello World Java application packaged as a war file
