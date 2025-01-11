@@ -1,19 +1,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Jenkins Emergency TechOps Labs</title>
+    <title>Jenkins Emergency TechOps Labs - Dev Release</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #2b2b2b;
-            color: #f5f5f5;
+            background-color: #1e1e1e; /* Slightly darker for DEV */
+            color: #e0e0e0;
             text-align: center;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #007bff;
+            background-color: #6c757d; /* Gray header for DEV */
             padding: 20px 0;
         }
 
@@ -22,12 +22,18 @@
             color: #fff;
         }
 
+        header p {
+            margin: 5px 0 0;
+            font-style: italic;
+            color: #ffc107; /* Yellow for DEV indicator */
+        }
+
         section {
             padding: 20px;
         }
 
         h2 {
-            color: #17a2b8;
+            color: #20c997; /* Slightly different accent for DEV */
         }
 
         .game-area {
@@ -39,8 +45,8 @@
 
         .game-card {
             width: 250px;
-            background-color: #343a40;
-            border: 2px solid #17a2b8;
+            background-color: #2e3b44;
+            border: 2px dashed #20c997; /* Dashed border for DEV */
             border-radius: 10px;
             padding: 15px;
             cursor: pointer;
@@ -49,7 +55,7 @@
 
         .game-card:hover {
             transform: scale(1.05);
-            background-color: #17a2b8;
+            background-color: #20c997;
             color: #fff;
         }
 
@@ -72,22 +78,22 @@
         }
 
         #details h3 {
-            color: #f8d44c;
+            color: #ffc107; /* Highlight details for DEV */
         }
 
         #details p {
-            color: #d4d4d4;
+            color: #cfcfcf;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Jenkins Emergency TechOps Labs</h1>
-        <p>Level up your skills by solving challenges!</p>
+        <p>Development Release - For Testing Only</p>
     </header>
 
     <section>
-        <h2>Select Your DEVOPS  Challenge</h2>
+        <h2>Select Your DEVOPS Challenge</h2>
         <div class="game-area">
             <div class="game-card" onclick="showDetails('Level 1')">
                 <img src="https://example.com/level1.jpg" alt="Level 1">
