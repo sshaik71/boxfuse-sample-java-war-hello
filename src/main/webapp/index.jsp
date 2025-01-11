@@ -1,19 +1,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Jenkins Emergency TechOps Labs</title>
+    <title>Jenkins Emergency TechOps Labs - QA Deployment</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #2b2b2b;
-            color: #f5f5f5;
+            background-color: #f8f9fa; /* Light gray background for QA */
+            color: #212529;
             text-align: center;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #007bff;
+            background-color: #28a745; /* Green header for QA */
             padding: 20px 0;
         }
 
@@ -22,12 +22,18 @@
             color: #fff;
         }
 
+        header p {
+            margin: 5px 0 0;
+            font-style: italic;
+            color: #ffc107; /* Yellow text for QA indicator */
+        }
+
         section {
             padding: 20px;
         }
 
         h2 {
-            color: #17a2b8;
+            color: #28a745; /* Match header color for consistency */
         }
 
         .game-area {
@@ -39,8 +45,8 @@
 
         .game-card {
             width: 250px;
-            background-color: #343a40;
-            border: 2px solid #17a2b8;
+            background-color: #ffffff; /* White background for cards */
+            border: 2px solid #28a745; /* Green border for QA */
             border-radius: 10px;
             padding: 15px;
             cursor: pointer;
@@ -49,7 +55,7 @@
 
         .game-card:hover {
             transform: scale(1.05);
-            background-color: #17a2b8;
+            background-color: #28a745;
             color: #fff;
         }
 
@@ -72,22 +78,22 @@
         }
 
         #details h3 {
-            color: #f8d44c;
+            color: #007bff; /* Highlight details section with blue */
         }
 
         #details p {
-            color: #d4d4d4;
+            color: #495057; /* Darker gray for QA details */
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Jenkins Emergency TechOps Labs</h1>
-        <p>Level up your skills by solving challenges!</p>
+        <p>QA Deployment - Testing Environment</p>
     </header>
 
     <section>
-        <h2>Select Your DEVOPS  Challenge</h2>
+        <h2>Select Your DEVOPS Challenge</h2>
         <div class="game-area">
             <div class="game-card" onclick="showDetails('Level 1')">
                 <img src="https://example.com/level1.jpg" alt="Level 1">
